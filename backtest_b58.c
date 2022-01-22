@@ -40,7 +40,7 @@ int base58Decode(const char* addr,const unsigned int addrLen,unsigned char *buf,
 	{
 		unsigned int c = addr[i];
 
-		     if (addr[i] < 58){	c -= 49;} // номера		
+	 if (addr[i] < 58){ c -= 49;} // номера		
     else if (addr[i] < 73){ c -= 56;} // A-H
     else if (addr[i] < 79){ c -= 57;} // J-N
     else if (addr[i] < 91){ c -= 58;} // P-Z
@@ -59,7 +59,7 @@ int base58Decode(const char* addr,const unsigned int addrLen,unsigned char *buf,
 
 int main()
 {
-  char addr[]="113YAvwi1V9WV9GEykK6XQ1UypmFPhVyh1";  //31313359417677693156395756394745796B4B365851315579706D46506856796831 00007ADA32CAA18032AA7EC717C53F06113C3A430DB1EE4C10
+  char addr[]="113YAvwi1V9WV9GEykK6XQ1UypmFPhVyh1"; 
 
 	const int addrLen = 34;
 	const int bufLen = 25;
@@ -71,7 +71,7 @@ int main()
   base58Decode(addr, addrLen, buf, bufLen);	
   
   print_array(buf,bufLen);  
-	base58Encode(buf, bufLen, addr2, addrLen);	
+  base58Encode(buf, bufLen, addr2, addrLen);	
     
   print_array(addr2,addrLen); // backtest
 
